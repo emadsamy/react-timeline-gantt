@@ -1,0 +1,175 @@
+.timeline-user {
+    background: #FFF;
+    border-radius: 4px;
+    border-left: 4px solid #DD0908;
+    border-right: 4px solid #FFF;
+    cursor: pointer;
+}
+.timeline-user .userContent {
+    margin-bottom: 0;
+    width: calc(100% - 40px);
+}
+.timeline-user .userImg {
+    width: 28px;
+    height: 28px;
+}
+.timeline-user .userName {
+    font-size: 14px;
+}
+.timeline-user .userInfo {
+    padding-left: 7px;
+}
+.timeline-user:hover .timeline-user-inner {
+    border-left: 6px solid #DC0907;
+    border-right: 6px solid #DC0907;
+}
+.timeline-user:hover .arrow-inner {
+    opacity: 1
+}
+.timeline-user-inner {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-radius: 4px;
+    padding: 7px;
+    margin: 0 -4px;
+    position: relative;
+}
+.timeline-user-inner,
+.arrow-inner {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.timeline-user .userStatus {
+    width: 40px;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    display: flex;
+    position: relative;
+}
+.timeline-user .userStatus-circle {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.timeline-user .userStatus-circle .userStatus-ic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 9px;
+}
+
+.userStatus-ongoing .icon-options {color: #FFF;background: #E68E0E; }
+.userStatus-completed .icon-correct {font-size: 20px !important;}
+.userStatus-completed .icon-correct:before {color: #3DD77F}
+.userStatus-completed .userStatus-text {background: #EDFFF5;border: 1.5px solid #25C76F;color: #25C76F;}
+.userStatus-completed .status-tooltip {background: #EDFFF5;border-color:  #25C76F;}
+
+.userStatus-delayed .ic-info {font-size: 15px !important;color: #FFF;background: #D63D3D; line-height: 22px !important}
+.userStatus-delayed .userStatus-text {background: #FFF5F5;border: 1.5px solid #D63D3D;color: #D63D3D;}
+.userStatus-delayed .status-tooltip {background: #FFF5F5;border-color:  #D63D3D;}
+
+.userStatus-created .ic-star {/*font-size: 15px !important; */ color: #FFF;background: #0000FC ;line-height: 21px !important;font-size: 8px  !important;}
+.userStatus-created .userStatus-text {background: #EAEAFF ;border: 1.5px solid #0000FD;color: #0000FD;}
+.userStatus-created .status-tooltip {background: #EAEAFF;border-color:  #0000FD;}
+
+.userStatus-canceled .ic-close {/*font-size: 15px !important; */ color: #989898;background: #E2E2E2}
+.userStatus-canceled .userStatus-text {background: #E6E6E6 ;border: 1.5px solid #989898;color: #989898}
+.userStatus-canceled .status-tooltip {background: #E6E6E6;border-color:  #989898;}
+
+.userStatus-hold .ic-pause {font-size: 7px !important; color: #FFF;background: #000}
+.userStatus-hold .userStatus-text {background: #E6E6E6 ;border: 1.5px solid #000;color: #000}
+.userStatus-hold .status-tooltip {background: #E6E6E6;border-color:  #000;}
+
+.arrow-inner {
+    position: absolute;
+    background: #DC0907;
+    width: 16px;
+    height: 13px;
+    opacity: 0
+}
+.arrow-inner i {
+    font-size: 8px;
+    display: inline-block;
+    color: #FFF;
+    margin-top: 0;
+    position: absolute;
+    top: 3px;
+    left: 4.5px;
+}
+.arrow-inner.arrow-top {
+    top: -13px;
+    border-radius: 50px 50px 0 0;
+}
+.arrow-inner.arrow-bottom {
+    bottom: -13px;
+    right: 9px;
+    border-radius: 0 0 50px 50px;
+}
+.arrow-inner.arrow-bottom i {
+    top: 1.5px
+}
+.userStatus-text {
+    position: absolute;
+    background: #EAEAFF;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    left: 156%;
+}
+.userStatus-ongoing .userStatus-text {
+    background: #FFF8EB;
+    color: #E68D0F;
+    border: 1.5px solid #E68D0F;
+}
+.userStatus-ongoing .status-tooltip{
+    border-color: #E68D0F;
+    background: #FFF8EB;
+}
+.status-tooltip {
+    position: absolute;
+    left: -5.4px;
+    width: 9px;
+    height: 9px;
+    border-width: 1.5px 0 0 1.5px;
+    border-style: solid;
+    border-radius: 3px 0 0 0;
+    transform: rotateZ(-45deg);
+    top: 9px;
+}
+.timeline-outer {
+    position: relative;
+}
+.timeline-outer .timeline-user {
+    height: 42px;
+    width: 55px;
+}
+.timeline-user-outer {
+    position: absolute;
+    left: 130%;
+    top: 4px;
+}
+.timeline-user-outer .userName {
+    white-space: nowrap;
+}
+.timeline-user-outer .userImg {
+    width: 34px;
+    height: 34px;
+}
+.timeline-user .userText {
+    color: #7F858D;
+    margin-top: -2px
+}
